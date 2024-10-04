@@ -438,7 +438,7 @@ var legend_geomorf = L.control({ position: 'bottomright' });
             }
             
             // Geomorfologi Layer
-            var SlopeLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/Slope.geojson"], {
+            var SlopeLayer = new L.GeoJSON.AJAX(["Slope.geojson"], {
                 style: function (Slope) {
                     return {
                         fillColor: getSlopeColor(Slope),
