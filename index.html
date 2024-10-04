@@ -562,7 +562,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           }
           
           // PL Layer
-          var DDLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/DD.geojson"], {
+          var DDLayer = new L.GeoJSON.AJAX(["https://raw.githubusercontent.com/fistifadila0600/DashboardPotensiAirRandugunting/refs/heads/main/DD.geojson"], {
               style: function (DD) {
                   return {
                       fillColor: getDDColor(DD),
@@ -621,7 +621,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             }
             
             // Geomorfologi Layer
-            var LDLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/LD.geojson"], {
+            var LDLayer = new L.GeoJSON.AJAX(["https://raw.githubusercontent.com/fistifadila0600/DashboardPotensiAirRandugunting/refs/heads/main/LD.geojson"], {
                 style: function (LD) {
                     return {
                         fillColor: getLDColor(LD),
@@ -683,7 +683,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           }
           
           // PL Layer
-          var GeologiLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/Geologi.geojson"], {
+          var GeologiLayer = new L.GeoJSON.AJAX(["https://raw.githubusercontent.com/fistifadila0600/DashboardPotensiAirRandugunting/refs/heads/main/Geologi.geojson"], {
               style: function (Geologi) {
                   return {
                       fillColor: getGeologiColor(Geologi),
