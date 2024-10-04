@@ -238,7 +238,7 @@
         l.bindPopup(out.join("<br />"));
       }
     }
-    var jsonTest = new L.GeoJSON.AJAX(["http://localhost/Dashboard Potensi Air Tanah DAS Randugunting/PotensiAir1.geojson"], {
+    var jsonTest = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/PotensiAir1.geojson"], {
       style: function (PotensiAir1) {
         return {
           fillColor: getColor(PotensiAir1),
@@ -363,7 +363,7 @@ function popUpGeomorfo(f, l) {
 }
 
 // Geomorfologi Layer
-var geomorfoLayer = new L.GeoJSON.AJAX(["http://localhost/Dashboard Potensi Air Tanah DAS Randugunting/Geomorfologi.geojson"], {
+var geomorfoLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/Geomorfologi.geojson"], {
     style: function (Geomorfologi) {
         return {
             fillColor: getGeomorfoColor(Geomorfologi),
@@ -438,7 +438,7 @@ var legend_geomorf = L.control({ position: 'bottomright' });
             }
             
             // Geomorfologi Layer
-            var SlopeLayer = new L.GeoJSON.AJAX(["http://localhost/Dashboard Potensi Air Tanah DAS Randugunting/Slope.geojson"], {
+            var SlopeLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/Slope.geojson"], {
                 style: function (Slope) {
                     return {
                         fillColor: getSlopeColor(Slope),
@@ -498,7 +498,7 @@ var legend_geomorf = L.control({ position: 'bottomright' });
           }
           
           // PL Layer
-          var LandUseLayer = new L.GeoJSON.AJAX(["http://localhost/Dashboard Potensi Air Tanah DAS Randugunting/LandUse.geojson"], {
+          var LandUseLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/LandUse.geojson"], {
               style: function (LandUse) {
                   return {
                       fillColor: getLandUseColor(LandUse),
@@ -562,7 +562,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           }
           
           // PL Layer
-          var DDLayer = new L.GeoJSON.AJAX(["http://localhost/Dashboard Potensi Air Tanah DAS Randugunting/DD.geojson"], {
+          var DDLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/DD.geojson"], {
               style: function (DD) {
                   return {
                       fillColor: getDDColor(DD),
@@ -621,7 +621,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             }
             
             // Geomorfologi Layer
-            var LDLayer = new L.GeoJSON.AJAX(["http://localhost/Dashboard Potensi Air Tanah DAS Randugunting/LD.geojson"], {
+            var LDLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/LD.geojson"], {
                 style: function (LD) {
                     return {
                         fillColor: getLDColor(LD),
@@ -683,7 +683,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           }
           
           // PL Layer
-          var GeologiLayer = new L.GeoJSON.AJAX(["http://localhost/Dashboard Potensi Air Tanah DAS Randugunting/Geologi.geojson"], {
+          var GeologiLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/Geologi.geojson"], {
               style: function (Geologi) {
                   return {
                       fillColor: getGeologiColor(Geologi),
