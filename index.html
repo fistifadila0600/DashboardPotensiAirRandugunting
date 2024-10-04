@@ -498,7 +498,7 @@ var legend_geomorf = L.control({ position: 'bottomright' });
           }
           
           // PL Layer
-          var LandUseLayer = new L.GeoJSON.AJAX(["https://github.com/fistifadila0600/Dashboard-Randugunting/blob/main/LandUse.geojson"], {
+          var LandUseLayer = new L.GeoJSON.AJAX(["LandUse.geojson"], {
               style: function (LandUse) {
                   return {
                       fillColor: getLandUseColor(LandUse),
