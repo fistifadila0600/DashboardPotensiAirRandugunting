@@ -477,12 +477,12 @@ var legend_geomorf = L.control({ position: 'bottomright' });
           
           // Function to get color for geomorphology
           function getLandUseColor(LandUse) {
-              return LandUse.properties.LandUse === "Tambak" ? "#41933a" :
-              LandUse.properties.LandUse === "Bangunan" ? "#f4390c" :
-              LandUse.properties.LandUse === "Sawah" ? "#27b031" :
-              LandUse.properties.LandUse === "Tubuh Air" ? "#20446a" :
-              LandUse.properties.LandUse === "Hutan" ? "#0b4608" :
-              LandUse.properties.LandUse === "Tanah Kosong" ? "#e8f382" :
+              return LandUse.properties.PL === "Tambak" ? "#41933a" :
+              LandUse.properties.PL === "Bangunan" ? "#f4390c" :
+              LandUse.properties.PL === "Sawah" ? "#27b031" :
+              LandUse.properties.PL === "Tubuh Air" ? "#20446a" :
+              LandUse.properties.PL === "Hutan" ? "#0b4608" :
+              LandUse.properties.PL === "Tanah Kosong" ? "#e8f382" :
                      "#A9A9A9"; // Default color for others
           }
           
@@ -543,11 +543,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Function to get color for geomorphology
           function getDDColor(DD) {
-              return DD.properties.Potensi === "1" ? "#bdd7f0" :
-              DD.properties.Potensi === "2" ? "#4b3fd1" :
-              DD.properties.Potensi === "3" ? "#272170" :
-              DD.properties.Potensi === "4" ? "#18134a" :
-              DD.properties.Potensi === "5" ?  "#18134a":
+              return DD.properties.Potensi === "Sangat Rendah" ? "#bdd7f0" :
+              DD.properties.Potensi === "Rendah" ? "#4b3fd1" :
+              DD.properties.Potensi === "Sedang" ? "#272170" :
+              DD.properties.Potensi === "Tinggi" ? "#18134a" :
+              DD.properties.Potensi === "Sangat Tinggi" ?  "#18134a":
                      "#A9A9A9"; // Default color for others
           }
           // Function to create popups for Geomorfologi
@@ -601,11 +601,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             
             // Function to get color for geomorphology
             function getLDColor(LD) {
-                return LD.properties.gridcode === 5 ? "#34360d" :
-                LD.properties.gridcode === 4 ? "#4b4d1b" :
-                LD.properties.gridcode === 3 ? "#6e7038" :
-                LD.properties.gridcode === 2 ? "#909169" :
-                LD.properties.gridcode === 1 ? "#a7a87d" :
+                return LD.properties.Potensi === "Sangat Tinggi" ? "#34360d" :
+                LD.properties.Potensi === "Tinggi" ? "#4b4d1b" :
+                LD.properties.Potensi === "Sedang" ? "#6e7038" :
+                LD.properties.Potensi === "Rendah" ? "#909169" :
+                LD.properties.Potensi === "Sangat Rendah" ? "#a7a87d" :
                        "#A9A9A9"; // Default color for others
             }
             
