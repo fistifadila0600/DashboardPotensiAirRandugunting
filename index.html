@@ -391,7 +391,7 @@ var geomorfoLayer = new L.GeoJSON.AJAX(["https://raw.githubusercontent.com/fisti
 var geo_legend = L.control({ position: 'topright' });
     geo_legend.onAdd = function (geomorfoMap) {
     var div = L.DomUtil.create('param_div', 'param_legend');
-    div.innerHTML = '<h4>Potensi Air Tanah</h4>' +
+    div.innerHTML = '<h4>Unit Geomorfologi</h4>' +
         '<div><span style="background-color: #b09ab0; width: 7px; height: 7px; display: inline-block;"></span> Perbukitan Antiklin</div>' +
         '<div><span style="background-color: #79789f; width: 7px; height: 7px; display: inline-block;"></span> Dataran Pasang Surut</div>' +
         '<div><span style="background-color: #5f8262; width: 7px; height: 7px; display: inline-block;"></span> Dataran Aluvial</div>' +
@@ -464,10 +464,10 @@ geo_legend.addTo(geomorfoMap);
             var slope_legend = L.control({ position: 'bottomright' });
 slope_legend.onAdd = function (slopeMap) {
     var div = L.DomUtil.create('param_div', 'param_legend');
-    div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Kemiringan Lereng</h4>' +
+    div.innerHTML = '<h4>Kemiringan Lereng</h4>' +
         '<div><span style="background-color: #41933a; width: 7px; height: 7px; display: inline-block;"></span> 0-2⁰</div>' +
         '<div><span style="background-color: #a4ff33; width: 7px; height: 7px; display: inline-block;"></span> 2-4⁰</div>' +
-      '<div><span style="background-color: #ffef33; width: 7px; height: 7px; display: inline-block;"></span> 4-8⁰</div>'
+      '<div><span style="background-color: #ffef33; width: 7px; height: 7px; display: inline-block;"></span> 4-8⁰</div>' +
         '<div><span style="background-color: #ff6d33; width: 7px; height: 7px; display: inline-block;"></span> 8-16⁰</div>' +
         '<div><span style="background-color: #ff3333; width: 7px; height: 7px; display: inline-block;"></span> 16-35⁰</div>'
     return div;
