@@ -461,7 +461,7 @@ geo_legend.addTo(geomorfoMap);
                 },
                 onEachFeature: popUpSlope,
             }).addTo(slopeMap);
-            var slope_legend = L.control({ position: 'bottomright' });
+            var slope_legend = L.control({ position: 'topright' });
 slope_legend.onAdd = function (slopeMap) {
     var slope_div = L.DomUtil.create('param_div', 'param_legend');
     slope_div.innerHTML = '<h4>Kemiringan Lereng</h4>' +
@@ -470,7 +470,7 @@ slope_legend.onAdd = function (slopeMap) {
       '<div><span style="background-color: #ffef33; width: 7px; height: 7px; display: inline-block;"></span> 4-8⁰</div>' +
         '<div><span style="background-color: #ff6d33; width: 7px; height: 7px; display: inline-block;"></span> 8-16⁰</div>' +
         '<div><span style="background-color: #ff3333; width: 7px; height: 7px; display: inline-block;"></span> 16-35⁰</div>'
-    return div;
+    return slope_div;
 };
 
 slope_legend.addTo(slopeMap);
@@ -534,7 +534,7 @@ slope_legend.addTo(slopeMap);
               },
               onEachFeature: popUpLandUse,
           }).addTo(LandUseMap);
-           var lu_legend = L.control({ position: 'bottomright' });
+           var lu_legend = L.control({ position: 'topright' });
 lu_legend.onAdd = function (LandUseMap) {
     var lu_div = L.DomUtil.create('param_div', 'param_legend');
     lu_div.innerHTML = '<h4>Penggunaan Lahan</h4>' +
@@ -544,7 +544,7 @@ lu_legend.onAdd = function (LandUseMap) {
         '<div><span style="background-color: #20446a; width: 7px; height: 7px; display: inline-block;"></span> Tubuh Air</div>' +
         '<div><span style="background-color: #0b4608; width: 7px; height: 7px; display: inline-block;"></span> Hutan</div>'+
         '<div><span style="background-color: #e8f382; width: 7px; height: 7px; display: inline-block;"></span> Tanah Kosong</div>'
-    return div;
+    return lu_div;
 };
 
 lu_legend.addTo(LandUseMap);
@@ -612,6 +612,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               },
               onEachFeature: popUpDD,
           }).addTo(DDMap);
+             var dd_legend = L.control({ position: 'topright' });
+dd_legend.onAdd = function (DDMap) {
+    var dd_div = L.DomUtil.create('param_div', 'param_legend');
+    dd_div.innerHTML = '<h4>Kerapatan Drainase</h4>' +
+        '<div><span style="background-color: #bdd7f0; width: 7px; height: 7px; display: inline-block;"></span> Sangat Rendah</div>' +
+        '<div><span style="background-color: #4b3fd1; width: 7px; height: 7px; display: inline-block;"></span> Rendah</div>' +
+        '<div><span style="background-color: #272170; width: 7px; height: 7px; display: inline-block;"></span> Sedang</div>' +
+        '<div><span style="background-color: #18134a; width: 7px; height: 7px; display: inline-block;"></span> Tinggi</div>' +
+        '<div><span style="background-color: #18134a; width: 7px; height: 7px; display: inline-block;"></span> Sangat Tinggi</div>'
+    return dd_div;
+};
+
+dd_legend.addTo(DDMap);
            </script> 
           <!-- End post item -->
 
@@ -671,6 +684,20 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 },
                 onEachFeature: popUpLD,
             }).addTo(LDMap);
+
+            var ld_legend = L.control({ position: 'topright' });
+ld_legend.onAdd = function (LDMap) {
+    var ld_div = L.DomUtil.create('param_div', 'param_legend');
+    ld_div.innerHTML = '<h4>Kerapatan Kelurusan</h4>' +
+        '<div><span style="background-color: #a7a87d; width: 7px; height: 7px; display: inline-block;"></span> Sangat Rendah</div>' +
+        '<div><span style="background-color: #909169; width: 7px; height: 7px; display: inline-block;"></span> Rendah</div>' +
+        '<div><span style="background-color: #6e7038; width: 7px; height: 7px; display: inline-block;"></span> Sedang</div>' +
+        '<div><span style="background-color: #4b4d1b; width: 7px; height: 7px; display: inline-block;"></span> Tinggi</div>' +
+        '<div><span style="background-color: #34360d; width: 7px; height: 7px; display: inline-block;"></span> Sangat Tinggi</div>'
+    return ld_div;
+};
+
+ld_legend.addTo(LDMap);
             </script>
           <!-- End post item -->
 
@@ -733,6 +760,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               },
               onEachFeature: popUpGeologi,
           }).addTo(GeologiMap);
+          var geologi_legend = L.control({ position: 'topright' });
+geologi_legend.onAdd = function (GeologiMap) {
+    var geologi_div = L.DomUtil.create('param_div', 'param_legend');
+    geologi_div.innerHTML = '<h4>Geologi</h4>' +
+        '<div><span style="background-color: #a7a87d; width: 7px; height: 7px; display: inline-block;"></span> Sangat Rendah</div>' +
+        '<div><span style="background-color: #909169; width: 7px; height: 7px; display: inline-block;"></span> Rendah</div>' +
+        '<div><span style="background-color: #6e7038; width: 7px; height: 7px; display: inline-block;"></span> Sedang</div>' +
+        '<div><span style="background-color: #4b4d1b; width: 7px; height: 7px; display: inline-block;"></span> Tinggi</div>' +
+        '<div><span style="background-color: #34360d; width: 7px; height: 7px; display: inline-block;"></span> Sangat Tinggi</div>'
+    return geologi_div;
+};
+
+ld_legend.addTo(LDMap);
           </script>        
           <!-- End post item -->
         </div>
