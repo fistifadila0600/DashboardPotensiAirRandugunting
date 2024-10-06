@@ -461,19 +461,19 @@ geo_legend.addTo(geomorfoMap);
                 },
                 onEachFeature: popUpSlope,
             }).addTo(slopeMap);
-            //var legend = L.control({ position: 'bottomright' });
-// legend.onAdd = function (slopeMap) {
-//     var div = L.DomUtil.create('div', 'legend');
-//     div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Kemiringan Lereng</h4>' +
-//         '<div><span style="background-color: #41933a; width: 7px; height: 7px; display: inline-block;"></span> 0-2⁰</div>' +
-//         '<div><span style="background-color: #a4ff33; width: 7px; height: 7px; display: inline-block;"></span> 2-4⁰</div>' +
-//       '<div><span style="background-color: #ffef33; width: 7px; height: 7px; display: inline-block;"></span> 4-8⁰</div>'
-//         '<div><span style="background-color: #ff6d33; width: 7px; height: 7px; display: inline-block;"></span> 8-16⁰</div>' +
-//         '<div><span style="background-color: #ff3333; width: 7px; height: 7px; display: inline-block;"></span> 16-35⁰</div>'
-//     return div;
-// };
+            var slope_legend = L.control({ position: 'bottomright' });
+slope_legend.onAdd = function (slopeMap) {
+    var div = L.DomUtil.create('param_div', 'param_legend');
+    div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Kemiringan Lereng</h4>' +
+        '<div><span style="background-color: #41933a; width: 7px; height: 7px; display: inline-block;"></span> 0-2⁰</div>' +
+        '<div><span style="background-color: #a4ff33; width: 7px; height: 7px; display: inline-block;"></span> 2-4⁰</div>' +
+      '<div><span style="background-color: #ffef33; width: 7px; height: 7px; display: inline-block;"></span> 4-8⁰</div>'
+        '<div><span style="background-color: #ff6d33; width: 7px; height: 7px; display: inline-block;"></span> 8-16⁰</div>' +
+        '<div><span style="background-color: #ff3333; width: 7px; height: 7px; display: inline-block;"></span> 16-35⁰</div>'
+    return div;
+};
 
-// legend.addTo(slopeMap);
+slope_legend.addTo(slopeMap);
             </script>
           <!-- End post item -->
 
