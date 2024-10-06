@@ -463,8 +463,8 @@ geo_legend.addTo(geomorfoMap);
             }).addTo(slopeMap);
             var slope_legend = L.control({ position: 'bottomright' });
 slope_legend.onAdd = function (slopeMap) {
-    var div = L.DomUtil.create('param_div', 'param_legend');
-    div.innerHTML = '<h4>Kemiringan Lereng</h4>' +
+    var slope_div = L.DomUtil.create('param_div', 'param_legend');
+    slope_div.innerHTML = '<h4>Kemiringan Lereng</h4>' +
         '<div><span style="background-color: #41933a; width: 7px; height: 7px; display: inline-block;"></span> 0-2⁰</div>' +
         '<div><span style="background-color: #a4ff33; width: 7px; height: 7px; display: inline-block;"></span> 2-4⁰</div>' +
       '<div><span style="background-color: #ffef33; width: 7px; height: 7px; display: inline-block;"></span> 4-8⁰</div>' +
@@ -534,20 +534,20 @@ slope_legend.addTo(slopeMap);
               },
               onEachFeature: popUpLandUse,
           }).addTo(LandUseMap);
-           //var legend = L.control({ position: 'bottomright' });
-// legend.onAdd = function (LandUseMap) {
-//     var div = L.DomUtil.create('div', 'legend');
-//     div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Penggunaan Lahan</h4>' +
-//         '<div><span style="background-color: #99ccff; width: 7px; height: 7px; display: inline-block;"></span> Tambak</div>' +
-//         '<div><span style="background-color: #f4390c; width: 7px; height: 7px; display: inline-block;"></span> Bangunan</div>' +
-//         '<div><span style="background-color: #27b031; width: 7px; height: 7px; display: inline-block;"></span> Sawah</div>'
-//         '<div><span style="background-color: #20446a; width: 7px; height: 7px; display: inline-block;"></span> Tubuh Air</div>' +
-//         '<div><span style="background-color: #0b4608; width: 7px; height: 7px; display: inline-block;"></span> Hutan</div>'+
-//         '<div><span style="background-color: #e8f382; width: 7px; height: 7px; display: inline-block;"></span> Tanah Kosong</div>'
-//     return div;
-// };
+           var lu_legend = L.control({ position: 'bottomright' });
+lu_legend.onAdd = function (LandUseMap) {
+    var lu_div = L.DomUtil.create('param_div', 'param_legend');
+    lu_div.innerHTML = '<h4>Penggunaan Lahan</h4>' +
+        '<div><span style="background-color: #99ccff; width: 7px; height: 7px; display: inline-block;"></span> Tambak</div>' +
+        '<div><span style="background-color: #f4390c; width: 7px; height: 7px; display: inline-block;"></span> Bangunan</div>' +
+        '<div><span style="background-color: #27b031; width: 7px; height: 7px; display: inline-block;"></span> Sawah</div>' +
+        '<div><span style="background-color: #20446a; width: 7px; height: 7px; display: inline-block;"></span> Tubuh Air</div>' +
+        '<div><span style="background-color: #0b4608; width: 7px; height: 7px; display: inline-block;"></span> Hutan</div>'+
+        '<div><span style="background-color: #e8f382; width: 7px; height: 7px; display: inline-block;"></span> Tanah Kosong</div>'
+    return div;
+};
 
-// legend.addTo(LandUseMap);
+lu_legend.addTo(LandUseMap);
           </script>        
           <!-- End post item -->
         </div>
