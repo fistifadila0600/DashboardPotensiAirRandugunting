@@ -377,19 +377,19 @@ var geomorfoLayer = new L.GeoJSON.AJAX(["https://raw.githubusercontent.com/fisti
 }).addTo(geomorfoMap);
 
 //var legend = L.control({ position: 'bottomright' });
-legend.onAdd = function (geomorfoMap) {
-    var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML = '<h4 style="font-size: 13px>Tipe Geomorfologi</h4>' +
-        '<div><span style="background-color: #b09ab0; width: 7px; height: 7px; display: inline-block;"></span> Perbukitan Antiklin</div>' +
-        '<div><span style="background-color: #79789f; width: 7px; height: 7px; display: inline-block;"></span> Dataran Pasang Surut</div>' +
-        '<div><span style="background-color: #5f8262; width: 7px; height: 7px; display: inline-block;"></span> Dataran Aluvial</div>' +
-      '<div><span style="background-color: #f2ebee; width: 7px; height: 7px; display: inline-block;"></span> Dataran Struktural Bergelombang</div>'
-        '<div><span style="background-color: #a288a0; width: 7px; height: 7px; display: inline-block;"></span> Perbukitan Sinklin</div>' +
-        '<div><span style="background-color: #c9bbc8; width: 7px; height: 7px; display: inline-block;"></span> Lembah Sinklin</div>'
-    return div;
-};
+// legend.onAdd = function (geomorfoMap) {
+//     var div = L.DomUtil.create('div', 'legend');
+//     div.innerHTML = '<h4 style="font-size: 13px>Tipe Geomorfologi</h4>' +
+//         '<div><span style="background-color: #b09ab0; width: 7px; height: 7px; display: inline-block;"></span> Perbukitan Antiklin</div>' +
+//         '<div><span style="background-color: #79789f; width: 7px; height: 7px; display: inline-block;"></span> Dataran Pasang Surut</div>' +
+//         '<div><span style="background-color: #5f8262; width: 7px; height: 7px; display: inline-block;"></span> Dataran Aluvial</div>' +
+//       '<div><span style="background-color: #f2ebee; width: 7px; height: 7px; display: inline-block;"></span> Dataran Struktural Bergelombang</div>'
+//         '<div><span style="background-color: #a288a0; width: 7px; height: 7px; display: inline-block;"></span> Perbukitan Sinklin</div>' +
+//         '<div><span style="background-color: #c9bbc8; width: 7px; height: 7px; display: inline-block;"></span> Lembah Sinklin</div>'
+//     return div;
+// };
 
-legend.addTo(geomorfoMap);
+// legend.addTo(geomorfoMap);
            </script> 
           <!-- End post item -->
 
