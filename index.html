@@ -376,21 +376,21 @@ var geomorfoLayer = new L.GeoJSON.AJAX(["https://raw.githubusercontent.com/fisti
     onEachFeature: popUpGeomorfo,
 }).addTo(geomorfoMap);
 
+legend.onAdd = function (geomorfoMap) {
+    var div = L.DomUtil.create('div', 'legend');
+    div.innerHTML = '<h4>Legenda</h4>' +
+        '<div><span style="background-color: #b09ab0; width: 8px; height: 10px; display: inline-block;"></span> Perbukitan Antiklin</div>' +
+        '<div><span style="background-color: #79789f; width: 8px; height: 10px; display: inline-block;"></span> Dataran Pasang Surut</div>' +
+        '<div><span style="background-color: #5f8262; width: 8px; height: 10px; display: inline-block;"></span> Dataran Aluvial</div>' +
+      '<div><span style="background-color: #f2ebee; width: 8px; height: 10px; display: inline-block;"></span> Dataran Struktural Bergelombang</div>'
+        '<div><span style="background-color: #a288a0; width: 8px; height: 10px; display: inline-block;"></span> Perbukitan Sinklin</div>' +
+        '<div><span style="background-color: #c9bbc8; width: 8px; height: 10px; display: inline-block;"></span> Lembah Sinklin</div>'
+    return div;
+};
+
+legend.addTo(geomorfoMap);
+
 var legend_geomorf = L.control({ position: 'bottomright' });
-
-    // Define the onAdd function to add legend content
-    legend.onAdd = function () {
-        var div = L.DomUtil.create('div', 'info legend');
-        var geomorfoTypes = [
-            { label: "Perbukitan Antiklin", color: "#b09ab0" },
-            { label: "Dataran Pasang Surut", color: "#79789f" },
-            { label: "Dataran Aluvial", color: "#5f8262" },
-            { label: "Dataran Struktural Bergelombang", color: "#f2ebee" },
-            { label: "Perbukitan Sinklin", color: "#a288a0" },
-            { label: "Lembah Sinklin", color: "#c9bbc8" },
-        ];}
-
-        legend_geomorf.addTo(geomorfoMap)
            </script> 
           <!-- End post item -->
 
