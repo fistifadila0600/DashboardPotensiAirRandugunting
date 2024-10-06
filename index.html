@@ -376,7 +376,7 @@ var geomorfoLayer = new L.GeoJSON.AJAX(["https://raw.githubusercontent.com/fisti
     onEachFeature: popUpGeomorfo,
 }).addTo(geomorfoMap);
 
-var legend = L.control({ position: 'bottomright' });
+//var legend = L.control({ position: 'bottomright' });
 legend.onAdd = function (geomorfoMap) {
     var div = L.DomUtil.create('div', 'legend');
     div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Tipe Geomorfologi</h4>' +
@@ -449,7 +449,7 @@ legend.addTo(geomorfoMap);
                 },
                 onEachFeature: popUpSlope,
             }).addTo(slopeMap);
-            var legend = L.control({ position: 'bottomright' });
+            //var legend = L.control({ position: 'bottomright' });
 legend.onAdd = function (slopeMap) {
     var div = L.DomUtil.create('div', 'legend');
     div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Kemiringan Lereng</h4>' +
@@ -522,7 +522,7 @@ legend.addTo(slopeMap);
               },
               onEachFeature: popUpLandUse,
           }).addTo(LandUseMap);
-           var legend = L.control({ position: 'bottomright' });
+           //var legend = L.control({ position: 'bottomright' });
 legend.onAdd = function (LandUseMap) {
     var div = L.DomUtil.create('div', 'legend');
     div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Penggunaan Lahan</h4>' +
