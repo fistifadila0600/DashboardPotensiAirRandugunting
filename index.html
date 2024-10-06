@@ -376,21 +376,20 @@ var geomorfoLayer = new L.GeoJSON.AJAX(["https://raw.githubusercontent.com/fisti
     onEachFeature: popUpGeomorfo,
 }).addTo(geomorfoMap);
 
+var legend = L.control({ position: 'bottomright' });
 legend.onAdd = function (geomorfoMap) {
     var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML = '<h4>Legenda</h4>' +
-        '<div><span style="background-color: #b09ab0; width: 8px; height: 10px; display: inline-block;"></span> Perbukitan Antiklin</div>' +
-        '<div><span style="background-color: #79789f; width: 8px; height: 10px; display: inline-block;"></span> Dataran Pasang Surut</div>' +
-        '<div><span style="background-color: #5f8262; width: 8px; height: 10px; display: inline-block;"></span> Dataran Aluvial</div>' +
-      '<div><span style="background-color: #f2ebee; width: 8px; height: 10px; display: inline-block;"></span> Dataran Struktural Bergelombang</div>'
-        '<div><span style="background-color: #a288a0; width: 8px; height: 10px; display: inline-block;"></span> Perbukitan Sinklin</div>' +
-        '<div><span style="background-color: #c9bbc8; width: 8px; height: 10px; display: inline-block;"></span> Lembah Sinklin</div>'
+    div.innerHTML = '<h4>Tipe Geomorfologi</h4>' +
+        '<div><span style="background-color: #b09ab0; width: 7px; height: 7px; display: inline-block;"></span> Perbukitan Antiklin</div>' +
+        '<div><span style="background-color: #79789f; width: 7px; height: 7px; display: inline-block;"></span> Dataran Pasang Surut</div>' +
+        '<div><span style="background-color: #5f8262; width: 7px; height: 7px; display: inline-block;"></span> Dataran Aluvial</div>' +
+      '<div><span style="background-color: #f2ebee; width: 7px; height: 7px; display: inline-block;"></span> Dataran Struktural Bergelombang</div>'
+        '<div><span style="background-color: #a288a0; width: 7px; height: 7px; display: inline-block;"></span> Perbukitan Sinklin</div>' +
+        '<div><span style="background-color: #c9bbc8; width: 7px; height: 7px; display: inline-block;"></span> Lembah Sinklin</div>'
     return div;
 };
 
 legend.addTo(geomorfoMap);
-
-var legend_geomorf = L.control({ position: 'bottomright' });
            </script> 
           <!-- End post item -->
 
@@ -450,6 +449,19 @@ var legend_geomorf = L.control({ position: 'bottomright' });
                 },
                 onEachFeature: popUpSlope,
             }).addTo(slopeMap);
+            var legend = L.control({ position: 'bottomright' });
+legend.onAdd = function (slopeMap) {
+    var div = L.DomUtil.create('div', 'legend');
+    div.innerHTML = '<h4>Kemiringan Lereng</h4>' +
+        '<div><span style="background-color: #41933a; width: 7px; height: 7px; display: inline-block;"></span> 0-2⁰</div>' +
+        '<div><span style="background-color: #a4ff33; width: 7px; height: 7px; display: inline-block;"></span> 2-4⁰</div>' +
+      '<div><span style="background-color: #ffef33; width: 7px; height: 7px; display: inline-block;"></span> 4-8⁰</div>'
+        '<div><span style="background-color: #ff6d33; width: 7px; height: 7px; display: inline-block;"></span> 8-16⁰</div>' +
+        '<div><span style="background-color: #ff3333; width: 7px; height: 7px; display: inline-block;"></span> 16-35⁰</div>'
+    return div;
+};
+
+legend.addTo(slopeMap);
             </script>
           <!-- End post item -->
 
@@ -510,6 +522,20 @@ var legend_geomorf = L.control({ position: 'bottomright' });
               },
               onEachFeature: popUpLandUse,
           }).addTo(LandUseMap);
+           var legend = L.control({ position: 'bottomright' });
+legend.onAdd = function (LandUseMap) {
+    var div = L.DomUtil.create('div', 'legend');
+    div.innerHTML = '<h4>Penggunaan Lahan</h4>' +
+        '<div><span style="background-color: #99ccff; width: 7px; height: 7px; display: inline-block;"></span> Tambak</div>' +
+        '<div><span style="background-color: #f4390c; width: 7px; height: 7px; display: inline-block;"></span> Bangunan</div>' +
+        '<div><span style="background-color: #27b031; width: 7px; height: 7px; display: inline-block;"></span> Sawah</div>'
+        '<div><span style="background-color: #20446a; width: 7px; height: 7px; display: inline-block;"></span> Tubuh Air</div>' +
+        '<div><span style="background-color: #0b4608; width: 7px; height: 7px; display: inline-block;"></span> Hutan</div>'+
+        '<div><span style="background-color: #e8f382; width: 7px; height: 7px; display: inline-block;"></span> Tanah Kosong</div>'
+    return div;
+};
+
+legend.addTo(LandUseMap);
           </script>        
           <!-- End post item -->
         </div>
