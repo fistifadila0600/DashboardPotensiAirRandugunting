@@ -764,15 +764,18 @@ ld_legend.addTo(LDMap);
 geologi_legend.onAdd = function (GeologiMap) {
     var geologi_div = L.DomUtil.create('param_div', 'param_legend');
     geologi_div.innerHTML = '<h4>Geologi</h4>' +
-        '<div><span style="background-color: #a7a87d; width: 7px; height: 7px; display: inline-block;"></span> Sangat Rendah</div>' +
-        '<div><span style="background-color: #909169; width: 7px; height: 7px; display: inline-block;"></span> Rendah</div>' +
-        '<div><span style="background-color: #6e7038; width: 7px; height: 7px; display: inline-block;"></span> Sedang</div>' +
-        '<div><span style="background-color: #4b4d1b; width: 7px; height: 7px; display: inline-block;"></span> Tinggi</div>' +
-        '<div><span style="background-color: #34360d; width: 7px; height: 7px; display: inline-block;"></span> Sangat Tinggi</div>'
+        '<div><span style="background-color: #f3edd4; width: 7px; height: 7px; display: inline-block;"></span> Aluvium (Qa)</div>' +
+        '<div><span style="background-color: #dde6e9; width: 7px; height: 7px; display: inline-block;"></span> Anggota Selorejo (QTps)</div>' +
+        '<div><span style="background-color: #9cacc5; width: 7px; height: 7px; display: inline-block;"></span> Formasi Bulu (Tmb)</div>' +
+        '<div><span style="background-color: #abbc98; width: 7px; height: 7px; display: inline-block;"></span> Formasi Ledok (Tml)</div>' +
+        '<div><span style="background-color: #ece7ca; width: 7px; height: 7px; display: inline-block;"></span> Formasi Ngrayong (Tmn)</div>' +
+      '<div><span style="background-color: #d4d7a2; width: 7px; height: 7px; display: inline-block;"></span> Formasi Mundu (Tmpm)</div>' +
+        '<div><span style="background-color: #a9a588; width: 7px; height: 7px; display: inline-block;"></span> Formasi Tawun (Tmt)</div>' +
+        '<div><span style="background-color: #9eb3a0; width: 7px; height: 7px; display: inline-block;"></span> Formasi Wonocolo (Tmw) </div>'
     return geologi_div;
 };
 
-ld_legend.addTo(LDMap);
+geologi_legend.addTo(GeologiMap);
           </script>        
           <!-- End post item -->
         </div>
