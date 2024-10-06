@@ -450,18 +450,18 @@ var geomorfoLayer = new L.GeoJSON.AJAX(["https://raw.githubusercontent.com/fisti
                 onEachFeature: popUpSlope,
             }).addTo(slopeMap);
             //var legend = L.control({ position: 'bottomright' });
-legend.onAdd = function (slopeMap) {
-    var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Kemiringan Lereng</h4>' +
-        '<div><span style="background-color: #41933a; width: 7px; height: 7px; display: inline-block;"></span> 0-2⁰</div>' +
-        '<div><span style="background-color: #a4ff33; width: 7px; height: 7px; display: inline-block;"></span> 2-4⁰</div>' +
-      '<div><span style="background-color: #ffef33; width: 7px; height: 7px; display: inline-block;"></span> 4-8⁰</div>'
-        '<div><span style="background-color: #ff6d33; width: 7px; height: 7px; display: inline-block;"></span> 8-16⁰</div>' +
-        '<div><span style="background-color: #ff3333; width: 7px; height: 7px; display: inline-block;"></span> 16-35⁰</div>'
-    return div;
-};
+// legend.onAdd = function (slopeMap) {
+//     var div = L.DomUtil.create('div', 'legend');
+//     div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Kemiringan Lereng</h4>' +
+//         '<div><span style="background-color: #41933a; width: 7px; height: 7px; display: inline-block;"></span> 0-2⁰</div>' +
+//         '<div><span style="background-color: #a4ff33; width: 7px; height: 7px; display: inline-block;"></span> 2-4⁰</div>' +
+//       '<div><span style="background-color: #ffef33; width: 7px; height: 7px; display: inline-block;"></span> 4-8⁰</div>'
+//         '<div><span style="background-color: #ff6d33; width: 7px; height: 7px; display: inline-block;"></span> 8-16⁰</div>' +
+//         '<div><span style="background-color: #ff3333; width: 7px; height: 7px; display: inline-block;"></span> 16-35⁰</div>'
+//     return div;
+// };
 
-legend.addTo(slopeMap);
+// legend.addTo(slopeMap);
             </script>
           <!-- End post item -->
 
@@ -523,19 +523,19 @@ legend.addTo(slopeMap);
               onEachFeature: popUpLandUse,
           }).addTo(LandUseMap);
            //var legend = L.control({ position: 'bottomright' });
-legend.onAdd = function (LandUseMap) {
-    var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Penggunaan Lahan</h4>' +
-        '<div><span style="background-color: #99ccff; width: 7px; height: 7px; display: inline-block;"></span> Tambak</div>' +
-        '<div><span style="background-color: #f4390c; width: 7px; height: 7px; display: inline-block;"></span> Bangunan</div>' +
-        '<div><span style="background-color: #27b031; width: 7px; height: 7px; display: inline-block;"></span> Sawah</div>'
-        '<div><span style="background-color: #20446a; width: 7px; height: 7px; display: inline-block;"></span> Tubuh Air</div>' +
-        '<div><span style="background-color: #0b4608; width: 7px; height: 7px; display: inline-block;"></span> Hutan</div>'+
-        '<div><span style="background-color: #e8f382; width: 7px; height: 7px; display: inline-block;"></span> Tanah Kosong</div>'
-    return div;
-};
+// legend.onAdd = function (LandUseMap) {
+//     var div = L.DomUtil.create('div', 'legend');
+//     div.innerHTML = '<h4 style="font-size: 13px; margin-bottom: 8px;>Penggunaan Lahan</h4>' +
+//         '<div><span style="background-color: #99ccff; width: 7px; height: 7px; display: inline-block;"></span> Tambak</div>' +
+//         '<div><span style="background-color: #f4390c; width: 7px; height: 7px; display: inline-block;"></span> Bangunan</div>' +
+//         '<div><span style="background-color: #27b031; width: 7px; height: 7px; display: inline-block;"></span> Sawah</div>'
+//         '<div><span style="background-color: #20446a; width: 7px; height: 7px; display: inline-block;"></span> Tubuh Air</div>' +
+//         '<div><span style="background-color: #0b4608; width: 7px; height: 7px; display: inline-block;"></span> Hutan</div>'+
+//         '<div><span style="background-color: #e8f382; width: 7px; height: 7px; display: inline-block;"></span> Tanah Kosong</div>'
+//     return div;
+// };
 
-legend.addTo(LandUseMap);
+// legend.addTo(LandUseMap);
           </script>        
           <!-- End post item -->
         </div>
