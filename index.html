@@ -581,11 +581,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Function to get color for geomorphology
           function getDDColor(DD) {
-              return DD.properties.Potensi === "Sangat Rendah" ? "#bdd7f0" :
-              DD.properties.Potensi === "Rendah" ? "#4b3fd1" :
-              DD.properties.Potensi === "Sedang" ? "#272170" :
-              DD.properties.Potensi === "Tinggi" ? "#18134a" :
-              DD.properties.Potensi === "Sangat Tinggi" ?  "#18134a":
+              return DD.properties.Potensi === "<0,5" ? "#bdd7f0" :
+              DD.properties.Potensi === "0,5-1" ? "#4b3fd1" :
+              DD.properties.Potensi === "1,1-2" ? "#272170" :
+              DD.properties.Potensi === "2,1-4" ? "#18134a" :
+              DD.properties.Potensi === ">4" ?  "#18134a":
                      "#A9A9A9"; // Default color for others
           }
           // Function to create popups for Geomorfologi
@@ -615,7 +615,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
              var dd_legend = L.control({ position: 'topright' });
 dd_legend.onAdd = function (DDMap) {
     var dd_div = L.DomUtil.create('param_div', 'param_legend');
-    dd_div.innerHTML = '<h4>Kerapatan Drainase</h4>' +
+    dd_div.innerHTML = '<h4>Kerapatan Drainase (km/km2)</h4>' +
         '<div><span style="background-color: #bdd7f0; width: 7px; height: 7px; display: inline-block;"></span> Sangat Rendah</div>' +
         '<div><span style="background-color: #4b3fd1; width: 7px; height: 7px; display: inline-block;"></span> Rendah</div>' +
         '<div><span style="background-color: #272170; width: 7px; height: 7px; display: inline-block;"></span> Sedang</div>' +
