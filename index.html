@@ -581,11 +581,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Function to get color for geomorphology
           function getDDColor(DD) {
-              return DD.properties.Potensi === "<0,5" ? "#bdd7f0" :
-              DD.properties.Potensi === "0,5-1" ? "#4b3fd1" :
-              DD.properties.Potensi === "1,1-2" ? "#272170" :
-              DD.properties.Potensi === "2,1-4" ? "#18134a" :
-              DD.properties.Potensi === ">4" ?  "#18134a":
+              return DD.properties.KlsPotensi === "<0,5" ? "#bdd7f0" :
+              DD.properties.KlsPotensi === "0,5-1" ? "#4b3fd1" :
+              DD.properties.KlsPotensi === "1,1-2" ? "#272170" :
+              DD.properties.KlsPotensi === "2,1-4" ? "#18134a" :
+              DD.properties.KlsPotensi === ">4" ?  "#18134a":
                      "#A9A9A9"; // Default color for others
           }
           // Function to create popups for Geomorfologi
