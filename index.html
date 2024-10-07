@@ -616,11 +616,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 dd_legend.onAdd = function (DDMap) {
     var dd_div = L.DomUtil.create('param_div', 'param_legend');
     dd_div.innerHTML = '<h4>Kerapatan Drainase (km/km2)</h4>' +
-        '<div><span style="background-color: #bdd7f0; width: 7px; height: 7px; display: inline-block;"></span> Sangat Rendah</div>' +
-        '<div><span style="background-color: #4b3fd1; width: 7px; height: 7px; display: inline-block;"></span> Rendah</div>' +
-        '<div><span style="background-color: #272170; width: 7px; height: 7px; display: inline-block;"></span> Sedang</div>' +
-        '<div><span style="background-color: #18134a; width: 7px; height: 7px; display: inline-block;"></span> Tinggi</div>' +
-        '<div><span style="background-color: #18134a; width: 7px; height: 7px; display: inline-block;"></span> Sangat Tinggi</div>'
+        '<div><span style="background-color: #bdd7f0; width: 7px; height: 7px; display: inline-block;"></span> <0,5</div>' +
+        '<div><span style="background-color: #4b3fd1; width: 7px; height: 7px; display: inline-block;"></span> 0,5-1</div>' +
+        '<div><span style="background-color: #272170; width: 7px; height: 7px; display: inline-block;"></span> 1,1-2</div>' +
+        '<div><span style="background-color: #18134a; width: 7px; height: 7px; display: inline-block;"></span> 2,1-4</div>' +
+        '<div><span style="background-color: #18134a; width: 7px; height: 7px; display: inline-block;"></span> >4</div>'
     return dd_div;
 };
 
