@@ -268,10 +268,10 @@
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'legend');
     div.innerHTML = '<h4>Potensi Air Tanah</h4>' +
-        '<div><span style="background-color: #18134a; width: 10px; height: 10px; display: inline-block;"></span> Tinggi</div>' +
-        '<div><span style="background-color: #272170; width: 10px; height: 10px; display: inline-block;"></span> Sedang</div>' +
-        '<div><span style="background-color: #4b3fd1; width: 10px; height: 10px; display: inline-block;"></span> Rendah</div>' +
-        '<div><span style="background-color: #bdd7f0; width: 10px; height: 10px; display: inline-block;"></span> Sangat Rendah</div>'
+        '<div><span style="background-color: #191970; width: 10px; height: 10px; display: inline-block;"></span> Tinggi</div>' +
+        '<div><span style="background-color: #4682B4; width: 10px; height: 10px; display: inline-block;"></span> Sedang</div>' +
+        '<div><span style="background-color: #87CEEB; width: 10px; height: 10px; display: inline-block;"></span> Rendah</div>' +
+        '<div><span style="background-color: #ADD8E6; width: 10px; height: 10px; display: inline-block;"></span> Sangat Rendah</div>'
     return div;
 };
 
@@ -297,10 +297,10 @@ var chartControl = L.control({ position: 'bottomleft' });
           label: 'Luas Wilayah Per Potensi (km2)',
           data: [0.068454, 56.835376, 66.682642, 17.896176],
           backgroundColor: [
-            '#bdd7f0',
-            '#4b3fd1',
-            '#272170',
-            '#18134a'
+            '#ADD8E6',
+            '#87CEEB',
+            '#4682B4',
+            '#191970'
           ],
           borderColor: [
             '#ffffff',
